@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Щоденник фільмів</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/films.css">
+    <link rel="stylesheet" href="css/error.css">
+
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- LENIS -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header"></div>
+
+<!-- Search -->
+<div class="section" id="search">
+    <div class="container">
+        <h3 class="section_title">Перейти до...</h3>
+
+        <div class="inner_section search-section">
+            <p class="section_text">Можна обрати <a href="#movie" class="section_link scrollBtn">Фільми</a>, якщо потрібна цілісна історія на один вечір, зануритися у <a href="#miniseries" class="section_link scrollBtn">Міні-серіали</a> з завершеним сюжетом без зайвих сезонів, або ж обрати <a href="#series" class="section_link scrollBtn">Серіали</a> - світи, які можна досліджувати нескінченно.</p>
+
+            <a href="#" class="second_btn random-btn">Мені пощастить</a>
+        </div>
+    </div>
+</div>
+
+<a href="#search" class="row-up scrollBtn">
+    <i class="fa-solid fa-angle-up"></i>
+</a>
+
+<!-- Movies -->
+<section class="section" id="movie">
+    <div class="container">
+        <h3 class="section_title">Фільми</h3>
+
+        <div class="inner_section movie-section" id="movies-container">
+            <template id="movie-template">
+                <div class="movie-card">
+                    <a class="movie-btn second_btn">Читати більше →</a>
+
+                    <img class="movie-poster">
+
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-type"></p>
+                            <p>Mute<br>Shadow</p>
+                        </div>
+
+                        <div class="card-description">
+                            <div class="card-rating">
+                                <p>IMDb</p>
+                                <p class="rating rating-imdb"></p>
+
+                                <p>критики</p>
+                                <p class="rating rating-critics"></p>
+                            </div>
+
+                            <p class="description-title genres-title">Жанр:</p>
+                            <p class="genres"></p>
+
+                            <div class="card-title"></div>
+
+                            <p class="description-title">Про що?</p>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="section_more" id="movie-more" style="display:none;">
+            <a href="movies.html" class="btn">Більше фільмів →</a>
+        </div>
+    </div>
+</section>
+
+<!-- PARALLAX-SECTION-->
+<section class="section parallax-section" id="top-movie-section">
+    <div class="parallax-bg">
+        <video class="parallax-bg-inner" id="top-movie-video" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="container trailer-container">
+        <div class="parallax-window trailer-window">
+            <div class="play-trigger">
+                <i class="fa-solid fa-pause"></i>
+            </div>
+            
+            <h3 class="parallax-movie-title" id="top-movie-title"></h3>
+        </div>
+
+        <div class="video-controls">
+            <input type="range" class="video-progress" value="0" min="0" max="100" step="0.1">
+        </div>
+    </div>
+</section>
+
+<!-- Separator -->
+<div class="separator">
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+</div>
+
+<!-- Miniseries -->
+<section class="section" id="miniseries">
+    <div class="container">
+        <h3 class="section_title">Міні-серіали</h3>
+
+        <div class="inner_section movie-section" id="miniseries-container">
+            <template id="movie-template">
+                <div class="movie-card">
+                    <a class="movie-btn second_btn">Читати більше →</a>
+
+                    <img class="movie-poster">
+
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-type"></p>
+                            <p>Mute<br>Shadow</p>
+                        </div>
+
+                        <div class="card-description">
+                            <div class="card-rating">
+                                <p>IMDb</p>
+                                <p class="rating rating-imdb"></p>
+
+                                <p>критики</p>
+                                <p class="rating rating-critics"></p>
+                            </div>
+
+                            <p class="description-title genres-title">Жанр:</p>
+                            <p class="genres"></p>
+
+                            <div class="card-title"></div>
+
+                            <p class="description-title">Про що?</p>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="section_more" id="miniseries-more" style="display:none;">
+            <a href="miniseries.html" class="btn">Більше міні-серіалів →</a>
+        </div>
+    </div>
+</section>
+
+<!-- PARALLAX-SECTION-->
+<section class="section parallax-section" id="top-miniseries-section">
+    <div class="parallax-bg">
+        <video class="parallax-bg-inner" id="top-miniseries-video" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="container trailer-container">
+        <div class="parallax-window trailer-window">
+            <div class="play-trigger">
+                <i class="fa-solid fa-pause"></i>
+            </div>
+            
+            <h3 class="parallax-movie-title" id="top-miniseries-title"></h3>
+        </div>
+
+        <div class="video-controls">
+            <input type="range" class="video-progress" value="0" min="0" max="100" step="0.1">
+        </div>
+    </div>
+</section>
+
+<!-- Separator -->
+<div class="separator">
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+</div>
+
+<!-- Series -->
+<section class="section" id="series">
+    <div class="container">
+        <h3 class="section_title">Серіали</h3>
+
+        <div class="inner_section movie-section" id="series-container">
+            <template id="movie-template">
+                <div class="movie-card">
+                    <a class="movie-btn second_btn">Читати більше →</a>
+
+                    <img class="movie-poster">
+
+                    <div class="card-content">
+                        <div class="card-header">
+                            <p class="card-type"></p>
+                            <p>Mute<br>Shadow</p>
+                        </div>
+
+                        <div class="card-description">
+                            <div class="card-rating">
+                                <p>IMDb</p>
+                                <p class="rating rating-imdb"></p>
+
+                                <p>критики</p>
+                                <p class="rating rating-critics"></p>
+                            </div>
+
+                            <p class="description-title genres-title">Жанр:</p>
+                            <p class="genres"></p>
+
+                            <div class="card-title"></div>
+
+                            <p class="description-title">Про що?</p>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="section_more" id="series-more" style="display:none;">
+            <a href="series.html" class="btn">Більше серіалів →</a>
+        </div>
+    </div>
+</section>
+
+<!-- PARALLAX-SECTION-->
+<section class="section parallax-section" id="top-series-section">
+    <div class="parallax-bg">
+        <video class="parallax-bg-inner" id="top-series-video" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="container trailer-container">
+        <div class="parallax-window trailer-window">
+            <div class="play-trigger">
+                <i class="fa-solid fa-pause"></i>
+            </div>
+            
+            <h3 class="parallax-movie-title" id="top-series-title"></h3>
+        </div>
+
+        <div class="video-controls">
+            <input type="range" class="video-progress" value="0" min="0" max="100" step="0.1">
+        </div>
+    </div>
+</section>
+
+<div id="footer"></div>
+
+<script src="js/data/movies.js"></script>
+<script>
+
+</script>
+
+<!-- STATIC PAGES -->
+<script src="js/static-pages-script.js"></script>
+
+<!-- GSAP (Parallax) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- JS -->
+<script src="js/script.js"></script>
