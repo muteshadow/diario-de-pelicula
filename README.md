@@ -1,1 +1,1 @@
-# diario-de-pel-cula
+# diario-de-pelicula
