@@ -4,7 +4,6 @@
 }
 
 .menu-toggle {
-    /* display: none; */
     width: 32px;
     height: 21px;
 
@@ -38,7 +37,44 @@
     transform: translateY(-8.26px) rotate(-45deg);
 }
 
-@media (max-width: 990px) {
+@media (max-width: 935px) {
+    .book-card {
+        width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 770px) {
+    /* NAV */
+    .nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav.open {
+        display: block;
+        background-color: var(--main-color);
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 100;
+    }
+
+    .nav.open {
+        max-height: 300px;
+        opacity: 1;
+    }
+
     /* INTRO */
     .intro {
         height: 100%;
@@ -47,13 +83,50 @@
         text-align: center;
     }
 
+    .intro_content {
+        width: 100%;
+        max-width: none;
+    }
+
     .intro_text {
         text-align: justify;
     }
 
-    /* SIX */
     .six {
-        margin-top: 50px;
+        position: relative;
+
+        width: 50%;
+        max-width: 340px;
+
+        transform: none;
+    }
+
+    /* SEPARATOR */
+    .firefly:nth-child(1)  { animation-duration: 6s; top: calc(10% + 20px); animation-delay: 0s; }
+    .firefly:nth-child(2)  { animation-duration: 10s; top: calc(40% + 20px); animation-delay: 2s; }
+    .firefly:nth-child(3)  { animation-duration: 5s;  top: calc(70% - 20px); animation-delay: 4s; }
+    .firefly:nth-child(4)  { animation-duration: 12s; top: calc(25% + 10px); animation-delay: 1s; }
+    .firefly:nth-child(5)  { animation-duration: 8s; top: calc(55% - 10px); animation-delay: 7s; }
+    .firefly:nth-child(6)  { animation-duration: 11s; top: calc(15% + 15px); animation-delay: 3s; }
+    .firefly:nth-child(7)  { animation-duration: 7s; top: calc(80% - 20px); animation-delay: 8s; }
+    .firefly:nth-child(8)  { animation-duration: 14s; top: calc(45% + 10px); animation-delay: 4s; }
+    .firefly:nth-child(9)  { animation-duration: 9s; top: calc(20% + 15px); animation-delay: 6s; }
+    .firefly:nth-child(10) { animation-duration: 13s; top: calc(65% - 10px); animation-delay: 9s; }
+
+    /* CATEGORIES */
+    .inner_section {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .categories_content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .categories {
+        width: 100%;
+        max-width: none;
     }
 
     .movie-section {
@@ -61,13 +134,15 @@
         text-align: left !important;
     }
 
-
     /* MOVIE-CARD */
-    .movie-card {
-        width: 100%;
-        max-width: 580px;
+    .inner_movie_section,
+    .inner_book_section  {
+        text-align: left;
     }
 
+    .movie-card {
+        width: 82.5%;
+    }
 
     /* ERROR */
     .error {
@@ -97,6 +172,16 @@
         z-index: 0;
     }
 
+    .error-login::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url('../assets/img/iniciar.png') center / cover no-repeat;
+        filter: blur(1.5px);
+
+        z-index: 0;
+    }
 
     /* щоб контент був поверх */
     .error > * {
@@ -120,94 +205,22 @@
     .error_btns_container {
         justify-content: center;
     }
-} 
 
-@media (max-width: 770px) {
-    /* NAV */
-    .nav {
-        display: none;
-    }
-
-    .nav-mobile {
-        display: block;
-    }
-
-    .nav.open {
-        display: block;
-        background-color: var(--main-color);
-    }
-
-    .nav {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        max-height: 0;
-        overflow: hidden;
-        width: 100%;
-        opacity: 0;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-        z-index: 100;
-    }
-
-    .nav.open {
-        max-height: 300px;
-        opacity: 1;
-    }
-
-    .nav_item {
-        width: 100%;
-        text-align: left;
-    }
-
-    .nav_item.logo {
-        display: none;
-    }
-
-    .logo-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left; 
-        margin: 0;
-        padding: 0 15px;
-        cursor: pointer;
-    }
-
-    .logo-toggle img {
-        height: clamp(40px, 5vw, 52px);
-    }
-
-    .nav_item:last-child {
-        border-bottom: none;
-    }
-
-
-    /* SEPARATOR */
-    .firefly {
-        animation-duration: 6s; 
-    }
-
-    .firefly:nth-child(1)  { animation-duration: 5s;  animation-delay: 0s; }
-    .firefly:nth-child(2)  { animation-duration: 7s;  animation-delay: 3s; }
-    .firefly:nth-child(3)  { animation-duration: 4s;  animation-delay: 6s; }
-    .firefly:nth-child(4)  { animation-duration: 8s;  animation-delay: 2s; }
-    .firefly:nth-child(5)  { animation-duration: 6s;  animation-delay: 10s; }
-    .firefly:nth-child(6)  { animation-duration: 7.5s; animation-delay: 4s; }
-    .firefly:nth-child(7)  { animation-duration: 5.5s; animation-delay: 12s; }
-    .firefly:nth-child(8)  { animation-duration: 9s;   animation-delay: 7s; }
-    .firefly:nth-child(9)  { animation-duration: 6.5s; animation-delay: 9s; }
-    .firefly:nth-child(10) { animation-duration: 8.5s; animation-delay: 14s; }
-
-
-    /* SECTION */
-    .inner_section {
+    /* MOVIE */
+    .movie-details {
         justify-content: center;
         text-align: center;
     }
 
+    .movie-details .title-left {
+        text-align: inherit;
+    }
+
+    .movie-details-info {
+        justify-content: center;
+    }
+
+    /* SECTION */
     .title-left {
         text-align: inherit;
     }
@@ -220,13 +233,6 @@
         width: 100%;
     }
 
-
-     /* CATEGORIES */
-    .section_categories {
-        width: 100%;
-    }
-
-
     /* FORM */
     .form-grid {
         grid-template-columns: 1fr 1fr;
@@ -236,23 +242,39 @@
         grid-column: 1 / span 2;
         grid-row: auto;
         
-        height: 170px;
+        height: 176px;
     }
 
     .form-btn {
         grid-column: 1 / span 2;
         justify-self: center;
-        margin-top: 10px;
+        margin: 0;
+    }
+
+    .screenshot {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 630px) {
+    /* BOOK-CARD */
+    .book-card {
+        width: 100%;
     }
 }
 
 @media (max-width: 430px) {
+    /* INTRO */
+    .six {
+        width: 100%;
+    }
+    
     /* LoGo */
-    .logo {
+    .logo .logo-desktop {
         display: none;
     }
 
-    .logo-mobile {
+    .logo .logo-mobile {
         display: block;
     }
 
@@ -264,7 +286,6 @@
     .categorie_title {
         opacity: 1;
     }
-
 
     /* FORM */
     .form-grid {
@@ -280,15 +301,84 @@
         grid-column: auto;
         justify-self: stretch;
     }
-}
 
-@media (max-width: 400px) {
     /* MOVIE-CARD */
-    .description-title {
-        display: none;
+    .movie-card {
+        width: 100%;
     }
 
-    .description {
-        display: none;
+    .description,
+    .book-card-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+
+    .genres {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+    
+    .card-content,
+    .book-card-info {
+        padding: 16px 4px;
+    }
+
+    /* BOOK-CARD */
+    .book-card-info {
+        padding-top: 50px;
+    }
+
+    /* TRAILER */
+    .trailer-section {
+        height: calc(100vh - var(--header-height, 62px));
+    }
+
+    .screenshot {
+        width: 100%;
+    }
+
+    /* CONTENT-RELATIONS */
+    .relation-card img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+
+        border-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .relation-card {
+        flex-wrap: wrap;
+    }
+
+    .relation-card-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    /* MOVIE-CARD */
+    .description,
+    .book-card-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 350px) {
+    /* MOVIE-CARD */
+    .description,
+    .book-card-description {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
     }
 }
