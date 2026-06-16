@@ -113,9 +113,14 @@ function renderPagination(totalItems, currentPage) {
 
     for (let i = 1; i <= totalPages; i++) {
         const pageLink = document.createElement('a');
-        pageLink.href = `?page=${i}`;
-        pageLink.textContent = i;
         
+        if (i === 1) {
+            pageLink.href = 'libros.html';
+        } else {
+            pageLink.href = `?page=${i}`;
+        }
+        
+        pageLink.textContent = i;
         if (i === currentPage) {
             pageLink.classList.add('active');
         }
