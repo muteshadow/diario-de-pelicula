@@ -14,6 +14,27 @@ function formatGenres(genreIds) {
         .join(', ');
 }
 
+// Функція для визначення кольору
+function applyCardColor(img, card) {
+    const colorThief = new ColorThief();
+    
+    const getColor = () => {
+        try {
+            const color = colorThief.getColor(img); 
+            const rgbString = `${color[0]}, ${color[1]}, ${color[2]}`;
+            card.style.setProperty('--bg-color', rgbString);
+        } catch (e) {
+            console.error("Не вдалося отримати колір для картинки", e);
+        }
+    };
+
+    if (img.complete) {
+        getColor();
+    } else {
+        img.addEventListener('load', getColor);
+    }
+}
+
 // Книги
 function createBookCardElement(book) {
     const cardLink = document.createElement('a');
@@ -53,6 +74,7 @@ function createBookCardElement(book) {
     cardLink.appendChild(img);
     cardLink.appendChild(infoDiv);
 
+    applyCardColor(img, cardLink);
     return cardLink;
 }
 
