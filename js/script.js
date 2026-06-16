@@ -178,7 +178,7 @@ document.addEventListener('click', function(e) {
     }
     
     // Сторінка в розробці (перенаправлення на статику dev.html)
-    const devPages = ['mas.html', 'search.html'];
+    const devPages = ['mas.html', 'search.html', 'book.html'];
     const isDevPage = devPages.some(page => href.includes(page));
 
     if (isDevPage) {
