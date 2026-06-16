@@ -6,6 +6,7 @@
 .menu-toggle {
     width: 32px;
     height: 21px;
+    padding: 1px 6px;
 
     border: none;
     background-color: transparent;
@@ -37,9 +38,80 @@
     transform: translateY(-8.26px) rotate(-45deg);
 }
 
+@media (max-width: 1024px) {
+    /* ERROR */
+    .error {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .error404::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url('../assets/img/Error404.png') center / cover no-repeat;
+        filter: blur(1.5px);
+
+        z-index: 0;
+    }
+
+    .error-dev::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url('../assets/img/dev.png') center / cover no-repeat;
+        filter: blur(1.5px);
+
+        z-index: 0;
+    }
+
+    .error-login::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url('../assets/img/iniciar.png') center / cover no-repeat;
+        filter: blur(1.5px);
+
+        z-index: 0;
+    }
+
+    /* щоб контент був поверх */
+    .error > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .error_content {
+        width: 100%;
+        background-color: var(--main-shadow);
+        margin: 0 auto;
+
+        padding: 12px;
+        border-radius: clamp(4px, 1vw, 24px);
+    }
+
+    .error img {
+        display: none;
+    }
+}
+
 @media (max-width: 935px) {
     .book-card {
         width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 890px) {
+    /* LoGo */
+    .logo .logo-desktop {
+        display: none;
+    }
+
+    .logo .logo-mobile {
+        display: block;
     }
 }
 
@@ -144,68 +216,6 @@
         width: 82.5%;
     }
 
-    /* ERROR */
-    .error {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .error404::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-
-        background: url('../assets/img/Error404.png') center / cover no-repeat;
-        filter: blur(1.5px);
-
-        z-index: 0;
-    }
-
-    .error-dev::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-
-        background: url('../assets/img/dev.png') center / cover no-repeat;
-        filter: blur(1.5px);
-
-        z-index: 0;
-    }
-
-    .error-login::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-
-        background: url('../assets/img/iniciar.png') center / cover no-repeat;
-        filter: blur(1.5px);
-
-        z-index: 0;
-    }
-
-    /* щоб контент був поверх */
-    .error > * {
-        position: relative;
-        z-index: 1;
-    }
-
-    .error_content {
-        width: 100%;
-        max-width: 850px;
-        background-color: var(--main-shadow);
-
-        padding: clamp(10px, 3vw, 30px);
-        border-radius: clamp(5px, 1vw, 25px);
-    }
-
-    .error img {
-        display: none;
-    }
-
-    .error_btns_container {
-        justify-content: center;
-    }
-
     /* MOVIE */
     .movie-details {
         justify-content: center;
@@ -264,18 +274,14 @@
 }
 
 @media (max-width: 430px) {
+    /* ERROR */
+    .error_btns_container {
+        justify-content: center;
+    }
+    
     /* INTRO */
     .six {
         width: 100%;
-    }
-    
-    /* LoGo */
-    .logo .logo-desktop {
-        display: none;
-    }
-
-    .logo .logo-mobile {
-        display: block;
     }
 
     /* CATEGORIES */

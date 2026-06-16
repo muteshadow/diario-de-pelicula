@@ -11,6 +11,7 @@
     --pagination-color: rgba(242, 236, 221, .7);
     
     --text-color: #FFFFFF;
+    --placeholder-color: rgba(255, 255, 255, .7);
     --btn-text-color: #000000;
 
     --relation-border-color: #495057;
@@ -28,6 +29,7 @@
     --pagination-color: rgba(104, 104, 104, .7);
 
     --text-color: #000000;
+    --placeholder-color: rgba(0, 0, 0, .7);
     --btn-text-color: #FFFFFF;
 
     --relation-border-color: #dee2e6;
@@ -63,6 +65,16 @@ img {
 
     display: block;
     object-fit: cover;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* CONTAINER */
@@ -297,12 +309,12 @@ nav ul {
     align-items: center;
 }
 
-.intro_content {
+.intro_content, .error_content {
     width: 57.5%;
     max-width: 690px;
 }
 
-.intro_title, error_title {
+.intro_title, .error_title {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-size: clamp(31px, calc(20.381px + 3.319vw), 61px);

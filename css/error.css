@@ -8,29 +8,117 @@
 }
 
 .error_content {
-    max-width: clamp(450px, 45vw, 850px);
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.error_title {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-size: clamp(32px, 8vw, 72px);
-}
-
-.error_text {
-    font-size: clamp(24px, 4vw, 28px);
+    z-index: 3;
 }
 
 .error_btns_container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: clamp(10px, 3vw, 30px);
+    align-items: end;
+    gap: 12px;
+}
+
+.error_btns_container .btn {
+    margin-bottom: 0;
 }
 
 .error img {
-    height: calc(100vh - var(--header-height, 75px));
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
     width: auto;
+    max-width: 40.5%;
+}
+
+/* SECOND-BTN */
+.second_btn {
+    background-color: var(--main-color);
+    
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 24px;
+
+    border: 3px solid var(--secondary-color);
+    border-radius: 24px;
+
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.second_btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+/* LOGIN-FORM */
+.login-group {
+    margin-bottom: 24px;  
+}
+
+.login-group label {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.login-group input {
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 32px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+}
+
+.login-btn {
+    border: none;
+    width: 100%;
+    margin: 0;
+}
+
+.login-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-top: 24px;
+}
+
+#show-register, #show-login, .forgot {
+    color: var(--secondary-color);
+}
+
+.iniciar-login-links {
+    justify-content: flex-end;
+}
+
+#show-register input::placeholder,
+#show-login input::placeholder,
+.forgot input::placeholder,
+.login-group input::placeholder {
+    color: var(--placeholder-color);
 }

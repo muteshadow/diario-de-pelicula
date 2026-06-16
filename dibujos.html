@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Diario de películas - Dibujos animados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/peliculas.css">
+
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header"></div>
+
+<!-- Search -->
+<div class="section" id="search">
+    <div class="container">
+        <h3 class="section_title">Echa un vistazo a...</h3>
+
+        <div class="inner_section search-section">
+            <p class="section_text">Elige <a href="#movie" class="section_link scrollBtn">Dibujos animados</a> para disfrutar de una historia vibrante y completa en un solo viaje, o sumérgete en <a href="#series" class="section_link scrollBtn">Series animadas</a> — universos fascinantes donde las aventuras continúan episodio tras episodio.</p>
+
+            <div class="search-buttons-group">
+                <a href="#" class="second_btn random-btn" data-mode="animation">Suerte</a>
+                <a href="search.html?mode=animation" class="second_btn alternative_btn">Buscar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#search" class="row-up scrollBtn">
+    <i class="fa-solid fa-angle-up"></i>
+</a>
+
+<!-- Modal -->
+<div id="random-modal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        
+        <div class="modal-movie-card">
+            <a href="#" class="movie-card-link data-modal-link">
+                <span class="movie-btn second_btn">Leer más →</span>
+
+                <img src="" alt="" class="data-modal-poster">
+
+                <div class="card-content">
+                    <div class="card-header">
+                        <p class="card-type data-modal-type"></p>
+                        <p>Mute<br>Shadow</p>
+                    </div>
+
+                    <div class="card-description">
+                        <div class="card-rating">
+                            <div class="imdb-rating">
+                                <p>IMDb</p>
+                                <p class="rating data-modal-imdb"></p>
+                            </div>
+
+                            <div class="critics-rating data-modal-critics-block">
+                                <p>Críticos</p>
+                                <p class="rating data-modal-critics"></p>
+                            </div>
+                        </div>
+
+                        <p class="description-title genres-title">Género:</p>
+                        <p class="genres data-modal-genres"></p>
+
+                        <div class="card-title data-modal-title"></div>
+                        
+                        <p class="description-title">¿De qué trata?</p>
+                        <p class="description data-modal-description"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Movies -->
+<section class="section movie_section" id="movie">
+    <div class="container">
+        <h3 class="section_title">Dibujos animados</h3>
+
+        <div class="inner_section inner_movie_section" id="movies-container">
+            <a href="#" class="movie-card js-card">
+                <span class="movie-btn second_btn">Leer más →</span>
+                <img src="" alt="" class="js-poster">
+
+                <div class="card-content">
+                    <div class="card-header">
+                        <p class="card-type js-type"></p>
+                        <p>Mute<br>Shadow</p>
+                    </div>
+
+                    <div class="card-description">
+                        <div class="card-rating">
+                            <div class="imdb-rating">
+                                <p>IMDb</p>
+                                <p class="rating js-imdb"></p>
+                            </div>
+                            <div class="critics-rating js-critics-block">
+                                <p>Críticos</p>
+                                <p class="rating js-critics"></p>
+                            </div>                                            
+                        </div>
+
+                        <p class="description-title genres-title">Género:</p>
+                        <p class="genres js-genres"></p>
+
+                        <div class="card-title js-title"></div>
+
+                        <p class="description-title">¿De qué trata?</p>
+                        <p class="description js-description"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section_more" id="movies-more-block" style="display:none;">
+            <a href="mas.html?type=movie&animated=1" class="btn">Más películas →</a>
+        </div>
+    </div>
+</section>
+
+<!-- PARALLAX-SECTION-->
+<section class="section parallax-section trailer-section" id="movie-trailer-block">
+    <div class="parallax-bg">
+        <video class="parallax-bg-inner" autoplay muted loop playsinline>
+            <source src="" type="video/mp4" class="js-trailer-source">
+            Tu navegador no es compatible con vídeo.
+        </video>
+    </div>
+
+    <div class="container trailer-container">
+        <div class="parallax-window">
+            <div class="trailer-window">
+                <div class="play-trigger"><i class="fa-solid fa-pause"></i></div>
+                <h3 class="parallax-movie-title"><a href="" class="js-trailer-link"></a></h3>
+            </div>
+            <div class="video-controls">
+                <input type="range" class="video-progress" value="0" min="0" max="100" step="any">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Separator -->
+<div class="separator">
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+</div>
+
+<!-- Series -->
+<section class="section movie_section" id="series">
+    <div class="container">
+        <h3 class="section_title">Series animadas</h3>
+
+        <div class="inner_section inner_movie_section" id="series-container">
+            <a href="#" class="movie-card js-card">
+                <span class="movie-btn second_btn">Leer más →</span>
+                <img src="" alt="" class="js-poster">
+
+                <div class="card-content">
+                    <div class="card-header">
+                        <p class="card-type js-type"></p>
+                        <p>Mute<br>Shadow</p>
+                    </div>
+
+                    <div class="card-description">
+                        <div class="card-rating">
+                            <div class="imdb-rating">
+                                <p>IMDb</p>
+                                <p class="rating js-imdb"></p>
+                            </div>
+                            <div class="critics-rating js-critics-block">
+                                <p>Críticos</p>
+                                <p class="rating js-critics"></p>
+                            </div>                                            
+                        </div>
+
+                        <p class="description-title genres-title">Género:</p>
+                        <p class="genres js-genres"></p>
+
+                        <div class="card-title js-title"></div>
+
+                        <p class="description-title">¿De qué trata?</p>
+                        <p class="description js-description"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section_more" id="series-more-block" style="display:none;">
+            <a href="mas.html?type=series&animated=1" class="btn">Más películas →</a>
+        </div>
+    </div>
+</section>
+
+<!-- PARALLAX-SECTION-->
+<section class="section parallax-section trailer-section" id="series-trailer-block">
+    <div class="parallax-bg">
+        <video class="parallax-bg-inner" autoplay muted loop playsinline>
+            <source src="" type="video/mp4" class="js-trailer-source">
+            Tu navegador no es compatible con vídeo.
+        </video>
+    </div>
+
+    <div class="container trailer-container">
+        <div class="parallax-window">
+            <div class="trailer-window">
+                <div class="play-trigger"><i class="fa-solid fa-pause"></i></div>
+                <h3 class="parallax-movie-title"><a href="" class="js-trailer-link"></a></h3>
+            </div>
+            <div class="video-controls">
+                <input type="range" class="video-progress" value="0" min="0" max="100" step="any">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="copyright">@Mute Shadow</p>
+    </div>
+</footer>
+
+<!-- STATIC PAGES -->
+<script src="js/static-pages-script.js"></script>
+
+<!-- GSAP (Parallax) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- JQUERY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- DATA -->
+<script src="js/data/genres.js"></script>
+<script src="js/data/content.js"></script>
+<!-- JS -->
+<script src="js/script.js"></script>
+<script src="js/peliculas.js"></script>
+
+</body>
+</html>
