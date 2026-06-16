@@ -178,11 +178,12 @@ document.addEventListener('click', function(e) {
     }
     
     // Сторінка в розробці (перенаправлення на статику dev.html)
-    if (href === '#' || href === '' || href === '/') {
-        if (!target.classList.contains('section_btn') && !target.closest('#show-register') && !target.closest('#show-login')) {
-            e.preventDefault();
-            window.location.href = 'dev.html';
-        }
+    const devPages = ['mas.html', 'search.html'];
+    const isDevPage = devPages.some(page => href.includes(page));
+
+    if (isDevPage) {
+        e.preventDefault();
+        window.location.href = 'dev.html';
     }
 });
 
