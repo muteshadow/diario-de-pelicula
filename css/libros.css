@@ -1,0 +1,120 @@
+/* BOOK-CARD */
+.inner_book_section {
+    justify-content: center;
+    row-gap: 24px;
+}
+
+.book-card {
+    width: calc(32% - 12px);
+    margin-top: 23.2px;
+
+    position: relative;
+
+    min-width: 282px;
+    max-width: 384px;
+    aspect-ratio: 1/1.5;
+
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.book-card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px 12px;
+    padding-top: 48px;
+    box-sizing: border-box;
+    z-index: 2;
+
+    font-family: "Montserrat Alternates", sans-serif;
+    line-height: 1.25;
+    color: #ffffff;
+    
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 48px);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 48px);
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(var(--bg-color, 30, 30, 30), 0.6) 40%,
+        rgba(var(--bg-color, 30, 30, 30), 0.98) 100%
+    );
+}
+
+.book-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.book-card-genres {
+    color: #F2ECDD;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.book-card-description {
+    text-align: justify;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* PAGINATION */
+.pagination_section {
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.pagination {
+    margin: 0 auto;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--btn-text-color);
+    background-color: var(--pagination-color);
+    border-radius: 5px;
+
+    width: 40px; 
+    aspect-ratio: 1 / 1; 
+    padding: 0; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+
+    transition: background-color .2s ease;
+}
+
+.pagination a:hover {
+    background-color: var(--secondary-color);
+}
+
+.pagination a.active {
+    background-color: var(--accent-color);
+}

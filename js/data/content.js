@@ -331,5 +331,113 @@ const content = [
         slogan: 'Cuidado con tus deseos',
 
         genres: [7, 9, 10, 17]
+    },
+    {
+        id: 23,
+        title: 'Where the Crawdads Sing',
+        poster: 'books/Where the Crawdads Sing.png',
+        description: 'Kya Clark crece sola entre los pantanos y se convierte en la principal sospechosa de un asesinato, mientras su pasado revela poco a poco la verdad sobre la vida, el amor y la supervivencia.',
+        type: 'book',
+
+        genres: [1, 4, 16, 40]
+    },
+    {
+        id: 24,
+        title: "A Good Girl's Guide to Murder",
+        poster: "books/A Good Girl's Guide to Murder.png",
+        description: 'Pip Fitz-Amobi, una estudiante de secundaria, decide investigar un antiguo caso de asesinato para demostrar la inocencia del principal sospechoso, pero la investigación pronto se vuelve más peligrosa de lo que esperaba.',
+        type: 'book',
+
+        genres: [3, 4, 5, 35]
+    },
+    {
+        id: 25,
+        title: 'Good Girl, Bad Blood',
+        poster: 'books/Good Girl Bad Blood.png',
+        description: 'Pip intenta dejar las investigaciones en el pasado, pero la desaparición de una persona cercana la obliga a volver a un caso que conduce a secretos aún más oscuros.',
+        type: 'book',
+
+        genres: [3, 4, 5, 18]
+    },
+    {
+        id: 26,
+        title: 'As Good as Dead',
+        poster: 'books/As Good As Dead.png',
+        description: 'Pip se encuentra en el centro de un peligroso juego donde la línea entre la vida y la muerte se vuelve cada vez más fina, y la verdad puede tener un precio demasiado alto.',
+        type: 'book',
+
+        genres: [1, 3, 4, 17, 35, 37]
+    },
+    {
+        id: 27,
+        title: 'The Maze Runner',
+        poster: 'books/The Maze Runner.png',
+        description: 'Thomas despierta entre adolescentes atrapados junto a un gigantesco laberinto e intenta descubrir cómo escapar de la trampa y quién está detrás de todo.',
+        type: 'book',
+
+        genres: [3, 8, 10, 17, 22]
+    },
+    {
+        id: 28,
+        title: 'The Scorch Trials',
+        poster: 'books/Maze Runner_ The Scorch Trials.png',
+        description: 'Después de escapar del laberinto, Thomas y sus amigos llegan a un mundo devastado, donde nuevas pruebas revelan una verdad aún más cruel.',
+        type: 'book',
+
+        genres: [3, 6, 8, 38, 42]
+    },
+    {
+        id: 29,
+        title: 'The Death Cure',
+        poster: 'books/Maze Runner_ The Death Cure.png',
+        description: 'Thomas emprende una peligrosa misión para salvar a sus amigos y llegar al origen de los experimentos de los que depende el futuro de la humanidad.',
+        type: 'book',
+
+        genres: [1, 6, 8, 23]
+    },
+    {
+        id: 30,
+        title: 'Never Lie',
+        poster: 'books/Never Lie.png',
+        description: 'Una pareja se muda a la aislada casa de una psiquiatra desaparecida sin dejar rastro, y las grabaciones de sus sesiones comienzan a revelar una inquietante verdad.',
+        type: 'book',
+
+        genres: [1, 3, 4, 41]
+    },
+    {
+        id: 31,
+        title: 'The Teacher',
+        poster: 'books/The Teacher.png',
+        description: 'Entre una estudiante y su profesor surge una relación peligrosa, donde ambos esconden sus propios motivos y la verdad resulta ser muy diferente de lo que parece.',
+        type: 'book',
+
+        genres: [1, 3, 26, 31]
+    },
+    {
+        id: 32,
+        title: "Miss Peregrine's Home for Peculiar Children",
+        poster: "books/Miss Peregrine's Home for Peculiar Children.png",
+        description: 'Jacob llega a una misteriosa isla donde encuentra un hogar para niños con habilidades extraordinarias y descubre cuál es su lugar en esta historia.',
+        type: 'book',
+
+        genres: [1, 9, 10, 41, 46]
+    },
+    {
+        id: 33,
+        title: 'Hollow City',
+        poster: 'books/Hollow City.png',
+        description: 'Jacob y los niños peculiares emprenden un peligroso viaje para rescatar a su directora secuestrada y encontrar un lugar seguro.',
+        type: 'book',
+
+        genres: [3, 9, 10, 17, 36]
+    },
+    {
+        id: 34,
+        title: 'Library of Souls',
+        poster: 'books/Library of Souls.png',
+        description: 'La batalla final obliga a Jacob y a sus amigos a enfrentarse a sus enemigos más peligrosos para salvar el mundo de los peculiares y a quienes aman.',
+        type: 'book',
+
+        genres: [1, 9, 10, 39]
     }
 ];
