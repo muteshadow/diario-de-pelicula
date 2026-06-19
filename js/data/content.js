@@ -439,5 +439,83 @@ const content = [
         type: 'book',
 
         genres: [1, 9, 10, 39]
+    },
+    {
+        id: 35,
+        title: 'Sinners',
+        poster: 'tracks cover/Sinners.png',
+        type: 'track',
+
+        origin_type: 'fanmade',
+        audio: 'tracks/Sinners.mp3',
+        duration: '2:23',
+
+        parent_id: 17,         
+        relation_type: 'soundtrack'
+    },
+    {
+        id: 36,
+        title: 'Poison',
+        poster: 'tracks cover/Hazbin Hotel Soundtracks Season 1.png',
+        type: 'track',
+
+        origin_type: 'official',
+        audio: 'tracks/Poison.mp3',
+        duration: '2:07',
+
+        parent_id: 17,         
+        relation_type: 'soundtrack'
+    },
+    {
+        id: 37,
+        title: 'Overlords Rap',
+        poster: 'tracks cover/Overlords Rap.png',
+        type: 'track',
+
+        origin_type: 'fanmade',
+        audio: 'tracks/Overlords Rap.mp3',
+        duration: '3:32',
+
+        parent_id: 17,         
+        relation_type: 'soundtrack'
+    },
+    {
+        id: 38,
+        title: 'Gravity',
+        poster: 'tracks cover/Hazbin Hotel Soundtracks Season 2.png',
+        type: 'track',
+
+        origin_type: 'official',
+        audio: 'tracks/Gravity.mp3',
+        duration: '1:51',
+
+        parent_id: 17,         
+        relation_type: 'soundtrack'
+    },
+    {
+        id: 39,
+        title: 'Carolina',
+        poster: 'tracks cover/Carolina.png',
+        type: 'track',
+
+        origin_type: 'official',
+        audio: 'tracks/Carolina.mp3',
+        duration: '4:24',
+
+        parent_id: 23,         
+        relation_type: 'soundtrack'
+    },
+    {
+        id: 40,
+        title: 'No Body, No Crime',
+        poster: 'tracks cover/No Body No Crime.png',
+        type: 'track',
+
+        origin_type: 'official',
+        audio: 'tracks/No Body, No Crime.mp3',
+        duration: '3:35',
+
+        parent_id: 24,         
+        relation_type: 'soundtrack'
     }
 ];
