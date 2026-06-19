@@ -12,6 +12,8 @@
     
     --text-color: #FFFFFF;
     --placeholder-color: rgba(255, 255, 255, .7);
+    --playlist-hover: rgba(255, 255, 255, .04);
+    --playlist-color: rgba(245, 203, 92, .12);
     --btn-text-color: #000000;
 
     --relation-border-color: #495057;
@@ -30,6 +32,8 @@
 
     --text-color: #000000;
     --placeholder-color: rgba(0, 0, 0, .7);
+    --playlist-hover: rgba(0, 0, 0, .04);
+    --playlist-color: rgba(239, 108, 0, .12);
     --btn-text-color: #FFFFFF;
 
     --relation-border-color: #dee2e6;
