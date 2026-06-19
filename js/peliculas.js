@@ -225,7 +225,7 @@ function triggerRandomModal(isAnimation) {
     modal.querySelector('.data-modal-title').textContent = movie.title || '';
     modal.querySelector('.data-modal-description').textContent = movie.description || '';
     modal.querySelector('.data-modal-genres').textContent = movie.genres || '';
-    modal.querySelector('.data-modal-imdb').textContent = movie.imdb_rating || '0.0';
+    modal.querySelector('.data-modal-imdb').textContent = movie.imdb_rating ? Number(movie.imdb_rating).toFixed(1) : '0.0';
 
     const criticsBlock = modal.querySelector('.data-modal-critics-block');
     if (movie.critics_rating) {
