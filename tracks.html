@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Diario de películas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/peliculas.css">
+    <link rel="stylesheet" href="css/libros.css">
+    <link rel="stylesheet" href="css/tracks.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header"></div>
+
+<a href="#search" class="row-up scrollBtn">
+    <i class="fa-solid fa-angle-up"></i>
+</a>
+
+<section class="section" id="search">
+    <div class="container">
+        <div class="album-page-header">
+            <h3 class="album-main-title section_title" id="main-album-title">Hazbin Hotel</h3>
+            <p class="album-subtitle-type" id="main-album-type">Película</p>
+        </div>
+
+        <div class="music-page-layout">
+            <div class="main-audio-card" id="sidebar-hero">
+                <div class="player-cover-wrapper">
+                    <img id="player-cover" src="assets/default-poster.jpg" alt="Cover">
+                </div>
+                <div class="player-details">
+                    <p id="player-title">Назва треку</p>
+                    <span id="player-type">Oficial</span>
+                </div>
+
+                <audio id="global-audio-player" src=""></audio>
+                
+                <div class="player-controls">
+                    <div class="progress-container">
+                        <input type="range" id="track-progress" value="0" min="0" max="100" step="any">
+                    </div>
+
+                    <div class="control-buttons">
+                        <button class="ctrl-btn" id="prev-btn" title="Попередній трек"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="play-trigger play-track" id="main-play-toggle" title="Play/Pause">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="ctrl-btn" id="next-btn" title="Наступний трек"><i class="fa-solid fa-forward-step"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracks-list-container">
+                <div class="custom-select-wrapper">
+                    <div class="custom-select-trigger">En revoltijo</div>
+                    
+                    <ul class="custom-options">
+                        <li class="custom-option selected" data-value="all">En revoltijo</li>
+                        <li class="custom-option" data-value="official">Solo de la película</li>
+                        <li class="custom-option" data-value="fanmade">Solo fanmade</li>
+                    </ul>
+                </div>
+            
+                <ul id="sidebar-tracks-list"></ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="other-albums-section">
+            <h3 class="section_title">Otros Universos Sonoros</h3>
+            <div class="inner_section inner_book_section" id="albums-grid"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p class="copyright">@Mute Shadow</p>
+    </div>
+</footer>
+
+<!-- STATIC PAGES -->
+<script src="js/static-pages-script.js"></script>
+
+<!-- GSAP (Parallax) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- COLOR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+<!-- DATA -->
+<script src="js/data/content.js"></script>
+<!-- JS -->
+<script src="js/script.js"></script>
+<script src="js/tracks.js"></script>
+
+</body>
+</html>
