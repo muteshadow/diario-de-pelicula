@@ -160,7 +160,7 @@ function initTrailerControls() {
 
         function updateProgress() {
             const percentage = (videoProgress.value / videoProgress.max) * 100;
-            videoProgress.style.setProperty('--progress', `${percentage}%`);
+            videoProgress.style.setProperty('--progress', `calc(${percentage}% - (${percentage} * 0.10px))`);
         }
 
         videoProgress.addEventListener('input', () => {
