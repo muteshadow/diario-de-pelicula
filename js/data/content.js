@@ -105,7 +105,10 @@ const content = [
         type: 'movie',
         slogan: 'Todos tienen sus secretos',
 
-        genres: [1, 4, 16, 40]
+        genres: [1, 4, 16, 40],
+
+        parent_id: 23,         
+        relation_type: 'adaptation'
     },
     {
         id: 8,
@@ -150,7 +153,10 @@ const content = [
         type: 'movie',
         slogan: 'Incluso una falsa esperanza es mejor que nada',
 
-        genres: [3, 8, 10, 22, 37]
+        genres: [3, 8, 10, 22, 37],
+
+        parent_id: 27,         
+        relation_type: 'adaptation'
     },
     {
         id: 11,
@@ -165,7 +171,13 @@ const content = [
         type: 'movie',
         slogan: 'El laberinto era solo el comienzo',
 
-        genres: [3, 6, 8, 38, 42]
+        genres: [3, 6, 8, 38, 42],
+
+        parent_id: 10,         
+        relation_type: 'spin_off',
+
+        parent_id: 28,         
+        relation_type: 'adaptation'
     },
     {
         id: 12,
@@ -180,7 +192,13 @@ const content = [
         type: 'movie',
         slogan: 'Todo laberinto tiene su final',
 
-        genres: [1, 6, 8, 23]
+        genres: [1, 6, 8, 23],
+
+        parent_id: 11,         
+        relation_type: 'spin_off',
+
+        parent_id: 29,         
+        relation_type: 'adaptation'
     },
     {
         id: 13,
@@ -254,7 +272,22 @@ const content = [
         type: 'series',
         slogan: 'Nunca sabes cómo terminará todo hasta que lo intentas',
 
-        genres: [2, 9, 12, 33]
+        genres: [2, 9, 12, 33],
+
+        parent_id: 16,         
+        relation_type: 'spin_off',
+
+        screenshots: [
+            { image_path: "Hazbin Hotel/Vox.jpg", caption: "Vox" },
+            { image_path: "Hazbin Hotel/Alastor.jpg", caption: "Alastor" },
+            { image_path: "Hazbin Hotel/Valentino.jpg", caption: "Valentino" },
+            { image_path: "Hazbin Hotel/Sir Pentious, Husk, Charlie Morningstar, Niffty, Angel Dust.jpg", caption: "Sir Pentious, Husk, Charlie Morningstar, Niffty, Angel Dust" },
+            { image_path: "Hazbin Hotel/Charlie Morningstar, Vaggie, Egg Bois, Sir Pentious.jpg", caption: "Charlie Morningstar, Vaggie, Egg Bois, Sir Pentious" },
+            { image_path: "Hazbin Hotel/Angel Dust, Husk.jpg", caption: "Angel Dust, Husk" },
+            { image_path: "Hazbin Hotel/Niffty.jpg", caption: "Niffty" },
+            { image_path: "Hazbin Hotel/Charlie Morningstar, Rosie, Alastor.jpg", caption: "Charlie Morningstar, Rosie, Alastor" },
+            { image_path: "Hazbin Hotel/Charlie Morningstar.jpg", caption: "Charlie Morningstar" }
+        ]
     },
     {
         id: 18,
@@ -300,7 +333,10 @@ const content = [
         type: 'movie',
         slogan: '¿Por qué estarías dispuesto a morir?',
 
-        genres: [2, 4, 10, 28]
+        genres: [2, 4, 10, 28],
+
+        parent_id: 19,         
+        relation_type: 'spin_off'
     },
     {
         id: 21,
@@ -330,7 +366,19 @@ const content = [
         type: 'movie',
         slogan: 'Cuidado con tus deseos',
 
-        genres: [7, 9, 10, 17]
+        genres: [7, 9, 10, 17],
+        
+        screenshots: [
+            { image_path: "Coraline/Coraline, Charlie Jones.jpg", caption: "Coraline, Charlie Jones" },
+            { image_path: "Coraline/Coraline, Other Parents.jpg", caption: "Coraline, Other Parents" },
+            { image_path: "Coraline/Coraline, The Cat.jpg", caption: "Coraline, The Cat" },
+            { image_path: "Coraline/Coraline.jpg", caption: "Coraline" },
+            { image_path: "Coraline/Coraline-1.jpg", caption: "Coraline" },
+            { image_path: "Coraline/Other Mother.jpg", caption: "Other Mother" },
+            { image_path: "Coraline/Other Mother-1.jpg", caption: "Other Mother" },
+            { image_path: "Coraline/The Cat.jpg", caption: "The Cat" },
+            { image_path: "Coraline/Wyborne 'Wybie' Lovat.jpg", caption: "Wyborne 'Wybie' Lovat" }
+        ]
     },
     {
         id: 23,
@@ -357,7 +405,10 @@ const content = [
         description: 'Pip intenta dejar las investigaciones en el pasado, pero la desaparición de una persona cercana la obliga a volver a un caso que conduce a secretos aún más oscuros.',
         type: 'book',
 
-        genres: [3, 4, 5, 18]
+        genres: [3, 4, 5, 18],
+
+        parent_id: 24,         
+        relation_type: 'spin_off'
     },
     {
         id: 26,
@@ -366,7 +417,10 @@ const content = [
         description: 'Pip se encuentra en el centro de un peligroso juego donde la línea entre la vida y la muerte se vuelve cada vez más fina, y la verdad puede tener un precio demasiado alto.',
         type: 'book',
 
-        genres: [1, 3, 4, 17, 35, 37]
+        genres: [1, 3, 4, 17, 35, 37],
+
+        parent_id: 25,         
+        relation_type: 'spin_off'
     },
     {
         id: 27,
@@ -429,7 +483,10 @@ const content = [
         description: 'Jacob y los niños peculiares emprenden un peligroso viaje para rescatar a su directora secuestrada y encontrar un lugar seguro.',
         type: 'book',
 
-        genres: [3, 9, 10, 17, 36]
+        genres: [3, 9, 10, 17, 36],
+
+        parent_id: 32,         
+        relation_type: 'spin_off'
     },
     {
         id: 34,
@@ -438,7 +495,10 @@ const content = [
         description: 'La batalla final obliga a Jacob y a sus amigos a enfrentarse a sus enemigos más peligrosos para salvar el mundo de los peculiares y a quienes aman.',
         type: 'book',
 
-        genres: [1, 9, 10, 39]
+        genres: [1, 9, 10, 39],
+
+        parent_id: 33,         
+        relation_type: 'spin_off'
     },
     {
         id: 35,
