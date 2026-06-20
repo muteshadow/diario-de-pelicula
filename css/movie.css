@@ -1,0 +1,340 @@
+/* MOVIE-DETAILS */
+.movie-details-layout {
+    display: grid;
+    grid-template-columns: minmax(282px, 33.333%) 1fr;
+    gap: 24px;
+}
+
+.movie-details-cover {
+    max-width: 384px;
+    margin: 0 auto;
+}
+
+.movie-details-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.movie-details-title {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.slogan {
+    font-style: italic;
+    color: var(--secondary-color);
+
+    margin-bottom: 24px;
+}
+
+.movie-description {
+    text-align: justify;
+}
+
+/* DETAILS-INFO */
+.movie-details-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    gap: 24px;
+}
+
+.details-rating {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.detail-genres {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.genres-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.genre-btn {
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.main-genre {
+    background-color: var(--accent-color);
+    color: var(--btn-text-color);
+}
+
+.secondary-genre {
+    background-color: var(--secondary-color);
+    color: var(--btn-text-color);
+}
+
+/* SCREENSHOTS */
+.screenshots-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.screenshots-container img {
+    flex: 1 1 calc(33.333% - 2px); 
+    min-width: 282px; 
+    max-width: 100%; 
+    height: auto;
+}
+
+/* MODAL-WINDOW */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container .modal-content {
+    max-width: 90vw;
+    max-height: 70vh;
+    width: fit-content;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+#modal-caption {
+    color: #ccc;
+    margin: 15px 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.carousel img {
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.carousel img.active {
+    border: 2px solid white;
+    opacity: 1;
+}
+
+/* TRAILER */
+.trailer-player {
+    position: relative;
+
+    width: 100%;
+    max-width: 792px;
+    margin: 0 auto;
+    background: var(--main-color);
+}
+
+.trailer-player video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-control {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 24px;
+}
+
+#progress,
+#volume {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    transition: height 0.1s ease-in-out;
+}
+
+#progress {
+    background: linear-gradient(to right, 
+        #F2ECDD 0%, 
+        #F2ECDD var(--progress, 0%), 
+        rgba(242, 236, 221, 0.3) calc(var(--progress, 0%) + 0.5%), 
+        rgba(242, 236, 221, 0.3) 100%
+    );
+}
+
+#volume {
+    background: linear-gradient(to right, 
+        #F2ECDD 0%, 
+        #F2ECDD var(--volume-progress, 100%), 
+        rgba(242, 236, 221, 0.3) calc(var(--volume-progress, 100%) + 0.5%), 
+        rgba(242, 236, 221, 0.3) 100%
+    );
+}
+
+#progress:hover,
+#volume:hover {
+    height: 10px;
+}
+
+/* === Chrome / Safari / Edge === */
+#progress::-webkit-slider-thumb,
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px; 
+    height: 12px;
+    border-radius: 50%;
+    background: #F2ECDD;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+#progress:hover::-webkit-slider-thumb,
+#volume:hover::-webkit-slider-thumb {
+    transform: scale(1.4);
+}
+
+/* === FireFox === */
+#progress::-moz-range-thumb,
+#volume::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: #F2ECDD;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+#progress:hover::-moz-range-thumb,
+#volume:hover::-moz-range-thumb {
+    transform: scale(1.4);
+}
+
+#progress:-moz-range-progress,
+#volume:-moz-range-progress {
+    background-color: #F2ECDD;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: #F2ECDD;
+    font-size: 20px;
+}
+
+.control-btns {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+#play-btn {
+    width: 15px;
+    aspect-ratio: 1/1;    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 120px;
+}
+
+#volume-icon {
+    width: 20px;
+    aspect-ratio: 1/1;
+    font-size: 16px;
+}
+
+/* Modal-Trailer */
+.trailer-player:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-player:fullscreen video {
+    width: 100%;
+    max-height: calc(100vh - 62px);
+    object-fit: contain;
+}
+
+.trailer-player:fullscreen .video-control {
+    position: relative; 
+    margin-top: -83px;
+    
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+
+.trailer-player:fullscreen .controls,
+.trailer-player:fullscreen #progress {
+    position: static;
+    transform: none;
+    width: 100%;
+}
+
+/* CONTENT-RELATIONS */
+.related-item {
+    width: 180px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+.related-item img {
+    margin-bottom: 8px;
+}
